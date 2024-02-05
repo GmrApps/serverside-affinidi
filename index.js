@@ -25,9 +25,10 @@ const initializeServer = async () => {
         },
     });
 
- app.listen(PORT, () => {
+    app.listen(PORT, () => {
         console.log(`Server listening on ${PORT}`);
     });
 }
 
+// Call the async function with await
 initializeServer();
