@@ -6,7 +6,7 @@ var app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 const initializeServer = async () => {
 
@@ -19,7 +19,7 @@ const initializeServer = async () => {
         issuer: process.env.AFFINIDI_ISSUER,
         client_id: process.env.AFFINIDI_CLIENT_ID,
         client_secret: process.env.AFFINIDI_CLIENT_SECRET,
-        redirect_uris: ['https://serverside-affinidi.onrender.com/auth/callback'], 
+        redirect_uris: ['serverside-affinidi.onrender.com/auth/callback'], 
         handleCredential: (credential) => {
             console.log('Received credential:', credential);
         },
